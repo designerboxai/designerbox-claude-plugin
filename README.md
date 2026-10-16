@@ -2,7 +2,7 @@
 
 ![DesignerBox](assets/logo.png)
 
-Turn product photos into studio-style images for ads, online stores and social posts, from a conversation with Claude. This plugin connects Claude to your DesignerBox account and teaches it the DesignerBox workflow: get your photo in, pick a curated image template or describe the shot, and save every result to your DesignerBox library.
+[https://designerbox.ai/](https://designerbox.ai/) turns product photos into studio-style images for ads, online stores and social posts, from a conversation with Claude. This plugin connects Claude to your DesignerBox account and teaches it the DesignerBox workflow: get your photo in, pick a curated image template or describe the shot, and save every result to your DesignerBox library.
 
 It works in Claude chat, Cowork and Claude Code.
 
