@@ -1,21 +1,21 @@
 ---
 name: add-photo
-description: Get the user's own photo into DesignerBox so the other DesignerBox tools can use it. Use when the user wants to work on a product photo, a picture of themselves, or any image of theirs, mentions attaching or uploading an image, or names a file on their computer.
+description: Upload the user's own photo or video to their DesignerBox library. Use when the user wants to save, upload or add an image or video to DesignerBox, mentions attaching a file for DesignerBox, or names a file on their computer to put in their library.
 ---
 
-Every DesignerBox image tool takes the image as a URL. Before you apply a template or edit a photo, get a URL for it in one of these ways, in this order.
+DesignerBox keeps the user's product photos and videos in their library. This skill gets a file from the user into that library.
 
-## 1. It is already in their library
+## 1. Check it is not already there
 
-If the user says the photo is already in DesignerBox, or names one they made earlier, call `list_assets` (use `type: "image"`) and pick it by name or date. Use `get_asset` if you need its full detail. Use the asset's `url` in the next tool.
+If the user says the photo is already in DesignerBox, call `list_assets` (use `type: "image"`, or `"video"`) and find it by name or date instead of uploading it again. Use `get_asset` for its full detail and link.
 
 ## 2. Upload it in the chat (claude.ai, Desktop and Cowork)
 
-Images attached to a chat message do not reach DesignerBox. Do not try to describe or re-create the attached image. Instead:
+Files attached to a chat message do not reach DesignerBox. Do not try to describe or re-create an attached image. Instead:
 
 1. Call `upload_asset` with no arguments. An upload panel opens in the chat.
 2. Tell the user to choose the file in that panel.
-3. When the upload finishes, the tool hands back the file's `url`. Use it in the next tool.
+3. When the upload finishes, the panel confirms it and hands back a link to the file. Share that link and tell the user the file is in their DesignerBox library.
 
 Do not ask the user to paste base64 or a link into the chat.
 
@@ -35,13 +35,9 @@ Claude Code has no upload panel, but it can send a local file the user names:
      --data-binary @"<path to file>"
    ```
 
-4. The response is JSON with `assetId` and `url`. Use that `url` in the next tool.
+4. The response is JSON with `assetId` and `viewUrl`. Share `viewUrl` with the user; it opens the file.
 
 An upload token works once. If the upload fails, call `upload_asset` again for a new one.
-
-## 4. A public image link
-
-If none of the above works, a public `https://` image link the user gives you can be passed to the image tools as it is.
 
 ## Limits
 

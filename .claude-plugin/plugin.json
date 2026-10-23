@@ -1,20 +1,20 @@
 {
   "name": "designerbox",
   "displayName": "DesignerBox",
-  "version": "1.0.2",
-  "description": "DesignerBox (https://designerbox.ai/) turns product photos into studio-style images for ads, online stores and social posts. Apply curated image templates, generate and edit images, and keep every result in your DesignerBox library.",
+  "version": "1.1.0",
+  "description": "DesignerBox (https://designerbox.ai/) keeps your product photos, designs and brand profiles in one library. Upload photos to it from the chat, find your pictures and designs, and keep your brand profile up to date.",
   "author": {
     "name": "DesignerBox",
     "email": "contact@designerbox.ai",
     "url": "https://designerbox.ai"
   },
-  "homepage": "https://designerbox.ai/docs/integrations/mcp",
+  "homepage": "https://designerbox.ai/docs/integrations/claude-connector",
   "repository": "https://github.com/designerboxai/designerbox-claude-plugin",
   "license": "MIT",
   "icon": "./assets/logo.png",
-  "documentationUrl": "https://designerbox.ai/docs/integrations/mcp",
+  "documentationUrl": "https://designerbox.ai/docs/integrations/claude-connector",
   "supportUrl": "https://designerbox.ai/contact",
   "privacyPolicyUrl": "https://designerbox.ai/privacy",
   "termsOfServiceUrl": "https://designerbox.ai/terms",
-  "keywords": ["design", "product photography", "image generation", "ecommerce", "marketing", "ads"]
+  "keywords": ["design", "product photos", "asset library", "brand", "ecommerce", "marketing"]
 }

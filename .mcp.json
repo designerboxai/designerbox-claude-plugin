@@ -2,7 +2,7 @@
   "mcpServers": {
     "designerbox": {
       "type": "http",
-      "url": "https://mcp.designerbox.ai/api"
+      "url": "https://mcp.designerbox.ai/claude"
     }
   }
 }
